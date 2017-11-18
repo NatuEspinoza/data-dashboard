@@ -1,3 +1,189 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+img {
+  width: 200px;
+  height: auto;
+}
+
+#header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 70px;
+  background: #FFC107;
+  text-align: center;
+}
+
+#container {
+  width: 85%;
+  height: 1000px;
+  float: right;
+}
+#menu-lateral {
+  width: 15%;
+  height: 1000px;
+  display: inline-block;
+}
+
+#user {
+  height: 110px;
+  border: 1px solid grey;
+  background: #535353;
+  padding-left: 30px;
+}
+
+#addStudent, #removeStudent, #addSprint {
+  height: 50px;
+  border: 1px solid grey;
+  background: #535353;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+#addStudent:hover, #removeStudent:hover, #addSprint:hover {
+  background: #303030;
+}
+
+#sedes {
+  margin: 20px;
+}
+
+#sedes #scl-17-2 {
+  font-size: 30px;
+  width: 390px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#sedes i{
+  cursor: pointer;
+}
+
+/* Menu desplegable con sedes y generaciones*/
+.menuDesplegable{
+  width: 400px;
+  height: 300px;
+  background: #6d6e6d;
+  display: block;
+}
+
+#menu-superior {
+  outline: 1px solid red;
+  height: 30px;
+}
+
+#menu-superior h2{
+  float: left;
+  display: inline-block;
+  margin: 0 0 0 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+h2:first-child {
+  color: #FFC107;
+  text-decoration: underline;
+}
+
+/*Menu despegable con sedes y generaciones*/
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.clearfix:after i{
+   content: "";
+   display: table;
+   text-decoration: none;
+}
+
+.menu-container {
+   width: 100%;
+   background: #E1E1E1;
+}
+
+.menu-nav {
+  background: #FFF;
+  position: relative;
+}
+
+.sub-menu {
+   width: 300px;
+   position: absolute;
+   display: none;
+   background: #fff;
+}
+
+.sub-menu h1 {
+   font-size: 18px;
+}
+
+.sub-menu li a {
+  line-height: 0;
+   font-size: 15px;
+   color: #000;
+   text-decoration: none;
+   border: none;
+}
+
+.menu-nav ul li:hover>ul {
+   display: block;
+   border: none;
+}
+
+.menu-nav>ul>li:after {
+   content: "\25BC";
+   font-size: 20px;
+   padding-left: 5px;
+   display: inline;
+   position: relative;
+}
+
+/* OVERVIEW */
+#section1, #section2, #section3 {
+  height: 40%;
+  outline: 1px solid blue;
+}
+
+/*Enrollement (#alumnas) y % desercion)*/
+/*Desempeño por sprint (tech y hse)*/
+/*NPS + satisfaccion de estudiantes*/
+#enrollement, #tech {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 48%;;
+  height: 95%;
+  background: #bdbcbf;
+  display: inline-block;
+}
+
+#achievement, #hse {
+  margin-top: 20px;
+  width: 48%;
+  height: 95%;
+  background: #bdbcbf;
+  float: right;
+}
+
+#nps {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 98%;
+  height: 95%;
+  background: #bdbcbf;
+}
+
+/*Clase para ocultar*/
+.ocultar {
+  display: none;
+}

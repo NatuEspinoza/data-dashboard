@@ -1,14 +1,115 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-  </head>
-  <body>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header id="header">
+    <img src="assets/images/logo-laboratoria.svg" alt="Laboratoria">
+  </header>
+  <!-- home-->
+  <main id="home">
+    <!-- menu de usuario-->
+    <nav id=menu-lateral>
+      <div id="user">
+        <p>Vale</p>
+      </div>
+      <div id="addStudent">
+        <p>Add Student</p>
+      </div>
+      <div id="removeStudent">
+        <p>Remove Student</p>
+      </div>
+      <div id="addSprint">
+        <p>Add Sprint</p>
+      </div>
+    </nav>
+    <!-- contenedor -->
+    <div id="container">
+      <!-- sedes y generaciones-->
+      <div id="sedes">
+        <div class="menu-container">
+          <nav class="menu-nav">
+            <ul class="clearfix">
+              <li id="scl-17-2"><a href="#!">SANTIAGO DE CHILE 2017-II</a>
+              <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <!--menú desplegable-->
+                <ul class="sub-menu">
+                  <h1>LIMA</h1>
+                  <li><a href="#">2015-I</a></li>
+                  <li><a href="#">2015-II</a></li>
+                  <li><a href="#">2016-I</a></li>
+                  <li><a href="#">2016-II</a></li>
+                  <li><a href="#">2017-I</a></li>
+                  <li><a href="#">2017-II</a></li>
+                  <h1>AREQUIPA</h1>
+                  <li><a href="#">2015-I</a></li>
+                  <li><a href="#">2015-II</a></li>
+                  <li><a href="#">2016-I</a></li>
+                  <li><a href="#">2016-II</a></li>
+                  <li><a href="#">2017-I</a></li>
+                  <li><a href="#">2017-II</a></li>
+                  <h1>CIUDAD DE MÉXICO</h1>
+                  <li><a href="#">2015-I</a></li>
+                  <li><a href="#">2015-II</a></li>
+                  <li><a href="#">2016-I</a></li>
+                  <li><a href="#">2016-II</a></li>
+                  <li><a href="#">2017-I</a></li>
+                  <li><a href="#">2017-II</a></li>
+                  <h1>SANTIAGO DE CHILE</h1>
+                  <li><a href="#">2015-I</a></li>
+                  <li><a href="#">2015-II</a></li>
+                  <li><a href="#">2016-I</a></li>
+                  <li><a href="#">2016-II</a></li>
+                  <li><a href="#">2017-I</a></li>
+                  <li><a href="#">2017-II</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+      <!-- menu de navegación-->
+      <div id="menu-superior">
+        <h2>OVERVIEW</h2>
+        <h2>STUDENTS</h2>
+        <h2>TEACHERS</h2>
+      </div>
+
+      <!-- OVERVIEW -->
+      <!-- alumnas activas y desertación / desempeño por sprint -->
+      <div id="section1">
+        <div id="enrollement">
+        </div>
+        <div id="achievement">
+        </div>
+      </div>
+      <div id="section2">
+        <div id="tech">
+        </div>
+        <div id="hse">
+        </div>
+      </div>
+      <div id="section3">
+        <div id="nps">
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <!-- Base de datos -->
+  <script src="./js/data.js"></script>
+  <!-- Aquí va tus archivos JS -->
+  <script src="./js/app.js"></script>
+  <script src="https://use.fontawesome.com/c555f55746.js"></script>
+</body>
+
 </html>
