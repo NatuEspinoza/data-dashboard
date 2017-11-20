@@ -14,6 +14,15 @@ body {
   display: none;
 }
 
+.select {
+  color: #FFC107;
+  text-decoration: underline;
+}
+
+.displayInlineBlock {
+  display: inline-block;
+}
+
 img {
   width: 200px;
   height: auto;
@@ -149,10 +158,6 @@ a {
   cursor: pointer;
 }
 
-h2:first-child {
-  color: #FFC107;
-  text-decoration: underline;
-}
 
 
 /* SECCIONES OVERVIEW */
@@ -199,4 +204,10 @@ h2:first-child {
 #students {
   height: 1000px;
   outline: 1px solid red;
+}
+
+/*div TEACHERS*/
+#teachers {
+  height: 1000px;
+  outline: 1px solid blue;
 }
