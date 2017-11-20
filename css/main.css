@@ -9,11 +9,16 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+h3 {
+  margin: 0;
+}
+
 /*Clase para ocultar Secciones*/
 .ocultar {
   display: none;
 }
 
+/*Clase al seleccionar una opcion del menu*/
 .select {
   color: #FFC107;
   text-decoration: underline;
@@ -21,6 +26,23 @@ body {
 
 .displayInlineBlock {
   display: inline-block;
+}
+
+.infoBox {
+  width: 200px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+  line-height: 1;
+  text-align: center;
+  background-color: #ababab;
+  display: inline-block;
+}
+
+#overview h1 {
+  padding: 10px 0 0 0;
+  margin: 0;
+  text-align: center;
 }
 
 img {
@@ -211,3 +233,7 @@ a {
   height: 1000px;
   outline: 1px solid blue;
 }
+
+/* DIANA CHAPARRO*/
+
+/* PAULA GIRALDO*/

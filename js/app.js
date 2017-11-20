@@ -1,4 +1,5 @@
 window.onload = function() {
+//NATALIA ESPINOZA
   // menu lateral de usuario
   var addStudent = document.getElementById('addStudent');
   addStudent.addEventListener('click', function() {
@@ -56,6 +57,7 @@ window.onload = function() {
   var enrollement = document.getElementById('enrollement');
   var inscritasText = document.createElement('div');
   enrollement.appendChild(inscritasText);
+  inscritasText.className = 'infoBox';
   inscritasText.innerHTML = '<h1># de inscritas ' + data.SCL["2017-2"].students.length + '</h1>';
 
   //Calculando el total de desertoras
@@ -72,7 +74,8 @@ window.onload = function() {
   //calcular el porcentaje de desertoras con una regla de tres
   porcentajeDesertoras = (desertoras * 100) / inscritas;
   enrollement.appendChild(desertorasText);
-  desertorasText.innerHTML = '<h1># de desertoras ' + (desertoras) + '<br>' + (number_format(porcentajeDesertoras,0,'',''))+'% de deserción ' + '</h1>';
+  desertorasText.className = 'infoBox';
+  desertorasText.innerHTML = '<h1>' + (number_format(porcentajeDesertoras,0,'','')) +'</h1>'+ '% de deserción ' + '<h3>' + (desertoras) + '# de desertoras ' + '</h3>';
 
   //Función para formatear el resultado del porcentaje
   function number_format( number, decimals, dec_point, thousands_sep ) {
@@ -85,16 +88,17 @@ window.onload = function() {
      return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
   }
 
-  //Ingresar datos de desempeño por sprint "achievement"
-  for (var i = 0; i < data.SCL['2017-2'].ratings.length; i++) {
+  //Ingresar datos de desempeño del último sprint "achievement"
+    var noCumple = data.SCL["2017-2"].ratings[0].student.no-cumple;
+    var supera = data.SCL["2017-2"].ratings[0].student.supera;
+    var cumple = data.SCL["2017-2"].ratings[0].student.cumple;
+    var cumpleMeta = cumple + supera;
     var achievement = document.getElementById('achievement');
     var achievementText = document.createElement('div');
     achievement.appendChild(achievementText);
-    achievementText.innerHTML = '<h1># de alumnas que cumple la meta (70% o +) ' +
-      data.SCL["2017-2"].ratings[0].student // data.SCL["2017-2"].ratings[0,1].student
-      +
-      '</h1>';
-  }
+    achievementText.className = 'infoBox';
+    achievementText.innerHTML = '<h1>' + (cumpleMeta) + '</h1>'+'<br>'+'<h3> # de alumnas que cumple la meta (70% o +) </h3>';
+
 
   //Ingresar nivel de satisfacción nps
   var nps = document.getElementById('nps');
@@ -105,6 +109,10 @@ window.onload = function() {
     +
     '</h1>';
 
+
+  //PAULA GIRALDO
+
+  //DIANA CHAPARRO
 
 };
 
