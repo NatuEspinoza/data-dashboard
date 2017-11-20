@@ -75,7 +75,7 @@ window.onload = function() {
   porcentajeDesertoras = (desertoras * 100) / inscritas;
   enrollement.appendChild(desertorasText);
   desertorasText.classList.add('infoBox','marginLeft-box', 'valorNegativo');
-  desertorasText.innerHTML = '<h1>' + (number_format(porcentajeDesertoras,0,'','')) +'</h1>'+  '<h3>' + '% de deserción'+'<br>'+(desertoras) + '# de desertoras ' + '</h3>';
+  desertorasText.innerHTML = '<h1>' + (number_format(porcentajeDesertoras,0,'','')) +'% </h1>'+  '<h3>' + 'de deserción'+'<br>'+(desertoras) + '# de desertoras </h3>';
 
   //Función para formatear el resultado del porcentaje
   function number_format( number, decimals, dec_point, thousands_sep ) {
@@ -88,16 +88,16 @@ window.onload = function() {
      return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
   }
 
-  //Ingresar datos de desempeño del último sprint "achievement"
-    var noCumple = data.SCL["2017-2"].ratings[0].student.no-cumple;
-    var supera = data.SCL["2017-2"].ratings[0].student.supera;
-    var cumple = data.SCL["2017-2"].ratings[0].student.cumple;
+  //Ingresar datos de desempeño del último sprint "achievement" (%)
+    var noCumple = data.SCL["2017-2"].ratings[1].student.no-cumple;
+    var supera = data.SCL["2017-2"].ratings[1].student.supera;
+    var cumple = data.SCL["2017-2"].ratings[1].student.cumple;
     var cumpleMeta = cumple + supera;
     var achievement = document.getElementById('achievement');
     var achievementText = document.createElement('div');
     achievement.appendChild(achievementText);
-    achievementText.classList.add('infoBox','marginLeft-box');
-    achievementText.innerHTML = '<h1>' + (cumpleMeta) + '</h1>'+'<br>'+'<h3> # de alumnas que cumple la meta (70% o +) </h3>';
+    achievementText.classList.add('infoBox','marginCenter', 'valorPositivo');
+    achievementText.innerHTML = '<h1>'+(cumpleMeta)+'%</h1>'+'<br>'+'<h3>de alumnas cumple la meta (70% o +)</h3>';
 
 
   //Ingresar nivel de satisfacción nps
@@ -106,8 +106,7 @@ window.onload = function() {
   nps.appendChild(npsText);
   npsText.innerHTML = '<h1># de alumnas que cumple la meta (70% o +) ' +
     data.SCL["2017-2"].ratings[0].nps // data.SCL["2017-2"].ratings[1].nps
-    +
-    '</h1>';
+    +'</h1>';
 
 
   //PAULA GIRALDO
@@ -119,15 +118,15 @@ var mostrarOcultar = function(event){
     var segundaGen2017 = document.getElementById("2017_2");
     var primeraGen2017 = document.getElementById("2017_1");
     var segundaGen2016 = document.getElementById("2016_2");
-   
+
        if(tabSeleccionado === 'tab2017_2'){
         console.log('vemos gen 17-2');
         //oculta gen 2017-1 y 2016-2
-        primeraGen2017.style.display= 'none';  
+        primeraGen2017.style.display= 'none';
         segundaGen2016.style.display= 'none'
         //mostrar gen 2017-2
-        segundaGen2017.style.display="block"; 
-        
+        segundaGen2017.style.display="block";
+
     }else if (tabSeleccionado === 'tab2017_1'){
         console.log('vemos gen 17-1');
         //oculta gen  2017-2 y 2016-2
@@ -144,7 +143,7 @@ var mostrarOcultar = function(event){
         //muestra solo 2016-2
         segundaGen2016.style.display= 'block';
     }
-    
+
 }
 //Siguiendo con el menú tabs (pestañas)...
 //creando var para cargar evento del tab (pestañas generaciones)
@@ -152,7 +151,7 @@ var cargarPagina = function(){
 //ocultando contenido  de todas las solapas al recargar la página
     var segundaGen2017 = document.getElementById("2017_2");
     var primeraGen2017 = document.getElementById("2017_1");
-    var segundaGen2016 = document.getElementById("2016_2"); 
+    var segundaGen2016 = document.getElementById("2016_2");
     var elementosTab = document.getElementsByClassName("tab");
     segundaGen2017.style.display= 'none';
     primeraGen2017.style.display= 'none'
@@ -163,7 +162,7 @@ var cargarPagina = function(){
     }
 }
 
-cargarPagina(); 
+cargarPagina();
 
 
 /*funcionalidad del buscador interno de alumnas*/

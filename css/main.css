@@ -24,9 +24,6 @@ h3 {
   text-decoration: underline;
 }
 
-.displayInlineBlock {
-  display: inline-block;
-}
 
 #overview h1 {
   padding: 10px 0 0 0;
@@ -157,6 +154,61 @@ a {
    position: relative;
 }
 
+/* Menus Sprints */
+.clearfixS:after i{
+   content: "";
+   display: table;
+   text-decoration: none;
+}
+.clearfixS{
+  list-style: none;
+}
+.menu-containerS {
+   width: 20%;
+   float: left;
+   display: inline-block;
+   border-radius: .2rem
+}
+
+.menu-navS {
+  width: 120px;
+  margin-left: 30px;
+  position: relative;
+}
+
+.sub-menuS {
+   width: 100px;
+   position: absolute;
+   display: none;
+   background: #dbdbdb;
+   line-height: 1;
+}
+
+.sub-menuS li a {
+   font-size: 15px;
+   margin: 0;
+   color: #000;
+   text-decoration: none;
+   border: none;
+}
+
+.sub-menuS li a:hover {
+  color: #FFC107;
+}
+
+.menu-navS ul li:hover>ul {
+   display: block;
+   border: none;
+}
+
+.menu-navS>ul>li:after {
+   content: "\25BC";
+   font-size: 0px;
+   padding-left: 1px;
+   display: inline;
+   position: relative;
+}
+
 #menu-superior {
   height: 30px;
   margin-left: 40px;
@@ -175,7 +227,6 @@ a {
 /* SECCIONES OVERVIEW */
 #section1, #section2, #section3 {
   height: 50%;
-
 }
 
 /*Enrollement (#alumnas) y % desercion)*/
@@ -186,7 +237,7 @@ a {
   margin-left: 20px;
   width: 48%;;
   height: 95%;
-  background: #bdbcbf;
+  background: #ededed;
   display: inline-block;
 }
 
@@ -194,7 +245,7 @@ a {
   margin-top: 20px;
   width: 48%;
   height: 95%;
-  background: #bdbcbf;
+  background: #ededed;
   float: right;
 }
 
@@ -203,7 +254,7 @@ a {
   margin-left: 20px;
   width: 98%;
   height: 95%;
-  background: #bdbcbf;
+  background: #ededed;
 }
 
 .infoBox {
@@ -213,13 +264,16 @@ a {
   margin-left: 10px;
   line-height: 1;
   text-align: center;
-  background-color: #ababab;
+  background-color: #d1d2d2;
   display: inline-block;
   text-align: center;
 }
 
 .marginLeft-box {
   margin-left: 50px;
+}
+.marginCenter {
+  margin-left: 200px;
 }
 
 .valorNegativo {
@@ -233,13 +287,11 @@ a {
 /*div OVERVIEW*/
 #overview {
   height: 1000px;
-  outline: 1px solid red;
 }
 
 /* div STUDENTS */
 #students {
   height: 1000px;
-  outline: 1px solid red;
 }
 
 /*div TEACHERS*/
@@ -275,8 +327,8 @@ a {
   border-bottom: grey solid 1px;
 }
 
-input #myInput{ 
-  
+input #myInput{
+
 }
 
 
@@ -369,8 +421,8 @@ footer{
   width: 100%;
   height: 10%;
   background-color: black;
-  padding: 0 auto; 
-  display: inline-block; 
+  padding: 0 auto;
+  display: inline-block;
 }
 
  #top input{
