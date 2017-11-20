@@ -113,8 +113,86 @@ window.onload = function() {
   //PAULA GIRALDO
 
   //DIANA CHAPARRO
+//Lo necesario para menú tabs (pestañas)
+var mostrarOcultar = function(event){
+    var tabSeleccionado = event.target.dataset.tabSeleccionado;
+    var segundaGen2017 = document.getElementById("2017_2");
+    var primeraGen2017 = document.getElementById("2017_1");
+    var segundaGen2016 = document.getElementById("2016_2");
+   
+       if(tabSeleccionado === 'tab2017_2'){
+        console.log('vemos gen 17-2');
+        //oculta gen 2017-1 y 2016-2
+        primeraGen2017.style.display= 'none';  
+        segundaGen2016.style.display= 'none'
+        //mostrar gen 2017-2
+        segundaGen2017.style.display="block"; 
+        
+    }else if (tabSeleccionado === 'tab2017_1'){
+        console.log('vemos gen 17-1');
+        //oculta gen  2017-2 y 2016-2
+        segundaGen2017.style.display= 'none';
+        segundaGen2016.style.display= 'none'
+        //muestra solo 2017-1
+        primeraGen2017.style.display= 'block';
 
-};
+    }else if (tabSeleccionado === 'tab2016_2'){
+        console.log('vemos gen 16-2');
+        //oculta gen 2017 2 y 1
+        segundaGen2017.style.display= 'none';
+        primeraGen2017.style.display= 'none'
+        //muestra solo 2016-2
+        segundaGen2016.style.display= 'block';
+    }
+    
+}
+//Siguiendo con el menú tabs (pestañas)...
+//creando var para cargar evento del tab (pestañas generaciones)
+var cargarPagina = function(){
+//ocultando contenido  de todas las solapas al recargar la página
+    var segundaGen2017 = document.getElementById("2017_2");
+    var primeraGen2017 = document.getElementById("2017_1");
+    var segundaGen2016 = document.getElementById("2016_2"); 
+    var elementosTab = document.getElementsByClassName("tab");
+    segundaGen2017.style.display= 'none';
+    primeraGen2017.style.display= 'none'
+    segundaGen2016.style.display= 'none';
+    var elementosTab = document.getElementsByClassName("tab");
+    for(var i = 0; i < elementosTab.length; i++){
+        elementosTab[i].addEventListener("click", mostrarOcultar);
+    }
+}
+
+cargarPagina(); 
+
+
+/*funcionalidad del buscador interno de alumnas*/
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+
+//alert('estoy');comprobando vinculo y funcionalidad
+
+}
+//´Botón TOP para ir arriba al inicio de sección
+function toTop() {
+    window.scrollTo(0, 0)
+}
+toTop();
+
 
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
