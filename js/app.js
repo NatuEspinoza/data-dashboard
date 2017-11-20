@@ -57,8 +57,8 @@ window.onload = function() {
   var enrollement = document.getElementById('enrollement');
   var inscritasText = document.createElement('div');
   enrollement.appendChild(inscritasText);
-  inscritasText.className = 'infoBox';
-  inscritasText.innerHTML = '<h1># de inscritas ' + data.SCL["2017-2"].students.length + '</h1>';
+  inscritasText.classList.add('infoBox','marginLeft-box');
+  inscritasText.innerHTML = '<h1>' + data.SCL["2017-2"].students.length +'</h1>'+'<br>'+'<h3># de alumnas inscritas </h3>';
 
   //Calculando el total de desertoras
   var desertorasText = document.createElement('div');
@@ -74,8 +74,8 @@ window.onload = function() {
   //calcular el porcentaje de desertoras con una regla de tres
   porcentajeDesertoras = (desertoras * 100) / inscritas;
   enrollement.appendChild(desertorasText);
-  desertorasText.className = 'infoBox';
-  desertorasText.innerHTML = '<h1>' + (number_format(porcentajeDesertoras,0,'','')) +'</h1>'+ '% de deserción ' + '<h3>' + (desertoras) + '# de desertoras ' + '</h3>';
+  desertorasText.classList.add('infoBox','marginLeft-box', 'valorNegativo');
+  desertorasText.innerHTML = '<h1>' + (number_format(porcentajeDesertoras,0,'','')) +'</h1>'+  '<h3>' + '% de deserción'+'<br>'+(desertoras) + '# de desertoras ' + '</h3>';
 
   //Función para formatear el resultado del porcentaje
   function number_format( number, decimals, dec_point, thousands_sep ) {
@@ -96,7 +96,7 @@ window.onload = function() {
     var achievement = document.getElementById('achievement');
     var achievementText = document.createElement('div');
     achievement.appendChild(achievementText);
-    achievementText.className = 'infoBox';
+    achievementText.classList.add('infoBox','marginLeft-box');
     achievementText.innerHTML = '<h1>' + (cumpleMeta) + '</h1>'+'<br>'+'<h3> # de alumnas que cumple la meta (70% o +) </h3>';
 
 

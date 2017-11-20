@@ -28,17 +28,6 @@ h3 {
   display: inline-block;
 }
 
-.infoBox {
-  width: 200px;
-  height: 100px;
-  margin-top: 20px;
-  margin-left: 20px;
-  line-height: 1;
-  text-align: center;
-  background-color: #ababab;
-  display: inline-block;
-}
-
 #overview h1 {
   padding: 10px 0 0 0;
   margin: 0;
@@ -71,6 +60,7 @@ img {
 
 #user {
   height: 110px;
+  padding-top: 20px;
   border: 1px solid grey;
   background: #535353;
   padding-left: 10px;
@@ -185,7 +175,7 @@ a {
 /* SECCIONES OVERVIEW */
 #section1, #section2, #section3 {
   height: 50%;
-  outline: 1px solid blue;
+
 }
 
 /*Enrollement (#alumnas) y % desercion)*/
@@ -214,6 +204,30 @@ a {
   width: 98%;
   height: 95%;
   background: #bdbcbf;
+}
+
+.infoBox {
+  width: 200px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 10px;
+  line-height: 1;
+  text-align: center;
+  background-color: #ababab;
+  display: inline-block;
+  text-align: center;
+}
+
+.marginLeft-box {
+  margin-left: 50px;
+}
+
+.valorNegativo {
+  color: #a60c10;
+}
+
+.valorPositivo {
+  color: #51bb07;
 }
 
 /*div OVERVIEW*/
