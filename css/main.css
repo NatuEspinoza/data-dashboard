@@ -9,6 +9,11 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+/*Clase para ocultar Secciones*/
+.ocultar {
+  display: none;
+}
+
 img {
   width: 200px;
   height: auto;
@@ -25,7 +30,6 @@ img {
 
 #container {
   width: 85%;
-  height: 1000px;
   float: right;
 }
 #menu-lateral {
@@ -38,7 +42,7 @@ img {
   height: 110px;
   border: 1px solid grey;
   background: #535353;
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
 #addStudent, #removeStudent, #addSprint {
@@ -64,38 +68,16 @@ img {
   cursor: pointer;
 }
 
+#scl-17-2:hover {
+  background: #939393;
+  border-radius: 0.2rem;
+}
+
 #sedes i{
   cursor: pointer;
 }
 
 /* Menu desplegable con sedes y generaciones*/
-.menuDesplegable{
-  width: 400px;
-  height: 300px;
-  background: #6d6e6d;
-  display: block;
-}
-
-#menu-superior {
-  outline: 1px solid red;
-  height: 30px;
-}
-
-#menu-superior h2{
-  float: left;
-  display: inline-block;
-  margin: 0 0 0 20px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-h2:first-child {
-  color: #FFC107;
-  text-decoration: underline;
-}
-
-/*Menu despegable con sedes y generaciones*/
-
 a {
   text-decoration: none;
   color: #000;
@@ -106,6 +88,7 @@ a {
    display: table;
    text-decoration: none;
 }
+
 
 .menu-container {
    width: 100%;
@@ -121,7 +104,8 @@ a {
    width: 300px;
    position: absolute;
    display: none;
-   background: #fff;
+   background: #dbdbdb;
+   line-height: 1;
 }
 
 .sub-menu h1 {
@@ -129,11 +113,14 @@ a {
 }
 
 .sub-menu li a {
-  line-height: 0;
    font-size: 15px;
    color: #000;
    text-decoration: none;
    border: none;
+}
+
+.sub-menu li a:hover {
+  color: #FFC107;
 }
 
 .menu-nav ul li:hover>ul {
@@ -143,15 +130,34 @@ a {
 
 .menu-nav>ul>li:after {
    content: "\25BC";
-   font-size: 20px;
+   font-size: 0px;
    padding-left: 5px;
    display: inline;
    position: relative;
 }
 
-/* OVERVIEW */
+#menu-superior {
+  height: 30px;
+  margin-left: 40px;
+}
+
+#menu-superior h2{
+  float: left;
+  display: inline-block;
+  margin: 0 0 0 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+h2:first-child {
+  color: #FFC107;
+  text-decoration: underline;
+}
+
+
+/* SECCIONES OVERVIEW */
 #section1, #section2, #section3 {
-  height: 40%;
+  height: 50%;
   outline: 1px solid blue;
 }
 
@@ -183,7 +189,14 @@ a {
   background: #bdbcbf;
 }
 
-/*Clase para ocultar*/
-.ocultar {
-  display: none;
+/*div OVERVIEW*/
+#overview {
+  height: 1000px;
+  outline: 1px solid red;
+}
+
+/* div STUDENTS */
+#students {
+  height: 1000px;
+  outline: 1px solid red;
 }
