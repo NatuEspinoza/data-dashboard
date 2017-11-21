@@ -131,11 +131,16 @@ window.onload = function() {
   var nps = document.getElementById('nps');
   var npsGrafico = document.getElementById('nps-grafico');
   var npsText = document.createElement('div');
-  npsText.innerHTML = '<h3>% nivel de satisfacción ' +
-    data.SCL["2017-2"].ratings[0].nps // data.SCL["2017-2"].ratings[1].nps
-    +'</h3>';
+  var iconosDiv = document.getElementById('iconos');
+  var promoters = data.SCL["2017-2"].ratings[1].nps.promoters;
+  var detractors = data.SCL["2017-2"].ratings[1].nps.detractors;
+  var passive = data.SCL["2017-2"].ratings[1].nps.passive;
+  var npsAcumulative = promoters - detractors;
+  npsText.innerHTML = '<h1>'+npsAcumulative+'%</h1>'+'<h3>nivel de satisfacción </h3>';
   nps.insertBefore(npsText, npsGrafico);
-  npsText.classList.add('infoBox','marginNPS');
+  npsText.classList.add('infoBox','marginNPS', 'valorPositivo');
+  //ingresar (promoter, pasive y retractors)
+  iconosDiv.innerHTML = '<h3>Promoters ' + promoters + '%'+'<br><br>Detractors ' + detractors +'%'+'<br><br>Passive ' + passive +'%</h3>';
 
 
   //PAULA GIRALDO
