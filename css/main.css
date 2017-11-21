@@ -237,3 +237,96 @@ a {
 /* DIANA CHAPARRO*/
 
 /* PAULA GIRALDO*/
+/*Menu calificación Teacher & Jedi */
+nav{
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 5px;
+
+}
+nav ul{
+  
+  list-style: none;
+}
+
+nav li{
+  width: 700%;
+  height: 100px;
+
+}
+
+
+p.menu{
+
+  padding: 15px;
+  padding-right: 20px;
+  display: inline-block;
+  background-color: #FFC107;
+  
+
+
+}
+
+
+input.buscador {
+width: 200px;
+height: 50px;
+background-color: white;
+outline: none;
+border:0px;
+
+}
+
+.menu:hover{
+  background-color: rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+h2.titulo{
+  text-align: center;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+/* Grafícas de calificaciones Profesores - Jedi*/
+
+#ratingChart{
+  height: 500px;
+  width: 800px;
+  display: inline-block;
+  margin-left:300px;
+  margin-top: -250px;
+}
+div #teacher{
+  height: 50px;
+  width: 150px;
+  position: absolute;
+  background:#ccc;
+  color: #000;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin-top: -400px;
+  margin-left:300px;
+  padding: 0px;
+}
+div #jedi{
+  height: 50px;
+  width: 150px;
+ position: absolute;
+  background: #ccc;
+  color: #000;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin-top:-400px;
+  margin-left:600px;
+
+
+
+}
+
+
+
+
+
+

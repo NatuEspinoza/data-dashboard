@@ -1,4 +1,9 @@
-window.onload = function() {
+window.onload = function() { 
+    google.charts.load('current', {'packages':['corechart']});
+
+      //Realizar llamado a la función que dibuja la gráfica cuando la libreria 
+      //de google este cargada. 
+      google.charts.setOnLoadCallback(drawChart);
 //NATALIA ESPINOZA
   // menu lateral de usuario
   var addStudent = document.getElementById('addStudent');
@@ -75,7 +80,9 @@ window.onload = function() {
   porcentajeDesertoras = (desertoras * 100) / inscritas;
   enrollement.appendChild(desertorasText);
   desertorasText.className = 'infoBox';
-  desertorasText.innerHTML = '<h1>' + (number_format(porcentajeDesertoras,0,'','')) +'</h1>'+ '% de deserción ' + '<h3>' + (desertoras) + '# de desertoras ' + '</h3>';
+  desertorasText.innerHTML = '<h1>' + 
+  (number_format(porcentajeDesertoras,0,'','')) 
+  +'</h1>'+ '% de deserción ' + '<h3>' + (desertoras) + '# de desertoras ' + '</h3>';
 
   //Función para formatear el resultado del porcentaje
   function number_format( number, decimals, dec_point, thousands_sep ) {
@@ -111,11 +118,60 @@ window.onload = function() {
 
 
   //PAULA GIRALDO
+  //Grafícas de calificaciones Profesores - Jedi
+//Carga del API  (Libreria) de visualización y el paquete de grafícas
+
+    
+
+      //función que crea, rellena la tabla de datos y dibuja el gráfico de barras (ColumnChart)
+      function drawChart() {
+    
+    // Se crean los datos de la tabla.
+        var dataRatingChart = new google.visualization.DataTable();
+        dataRatingChart.addColumn('string', 'Sprints');
+        dataRatingChart.addColumn('number', 'Teachers Rating');
+        dataRatingChart.addColumn({type: 'string', role: 'annotation'});
+        dataRatingChart.addColumn('number', 'Jedi Master Rating');
+        dataRatingChart.addColumn({type: 'string', role: 'annotation'});
+
+        dataRatingChart.addRows([
+          [{v: '', f: 'Sprint 1'},   4.0, '4.0',  4.8, '4.8'],
+          [{v: '', f: 'Sprint 2'},   3.9, '3.9',   4.3, '4.3'],
+          
+        ]);
+
+        // se crean los opciones (tiulo)
+        var optionsRatingChart = {
+        title: 'Teachers & Jedi Masters Ratings',
+        annotations: {
+          alwaysOutside: true,
+          textStyle: {
+            fontSize: 14,
+            color: '#000',
+            auraColor: 'none'
+          }
+        },
+        hAxis: {
+          title: 'Sprints'
+        },
+        vAxis: {
+          title: 'Ratings'
+        }
+      };
+
+        // Se instancia y se dibuja la gráfica pasando como parámetro los datos y las opciones.
+        var ratingChart = new google.visualization.ColumnChart(document.getElementById('ratingChart'));
+        ratingChart.draw(dataRatingChart, optionsRatingChart);
+
+    }
+
 
   //DIANA CHAPARRO
+ 
+    
 
 };
 
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
-console.log(data);
+//console.log(data);
