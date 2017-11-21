@@ -174,6 +174,7 @@ a {
   width: 120px;
   margin-left: 30px;
   position: relative;
+  display: inline-block;
 }
 
 .sub-menuS {
@@ -276,6 +277,10 @@ a {
   margin-left: 200px;
 }
 
+.marginNPS {
+  margin-left: 300px;
+}
+
 .valorNegativo {
   color: #a60c10;
 }
@@ -283,6 +288,57 @@ a {
 .valorPositivo {
   color: #51bb07;
 }
+
+/*Gráficas */
+#desertoras-grafico{
+  width: 70%;
+  height: 280px;
+  margin: 20px 0 0 80px;
+  display: block;
+  outline: 1px solid red;
+}
+
+#cumple-grafico{
+  width: 70%;
+  height: 280px;
+  margin: 20px 0 0 80px;
+  display: block;
+  outline: 1px solid red;
+}
+
+#hse-grafico {
+  width: 70%;
+  height: 300px;
+  margin: 70px 0 0 100px;
+  display: block;
+  outline: 1px solid red;
+}
+#tech-grafico {
+  width: 70%;
+  height: 300px;
+  margin: 120px 0 0 100px;
+  display: block;
+  outline: 1px solid blue;
+}
+
+#nps-grafico {
+  width: 50%;
+  height: 250px;
+  margin: 30px 0 0 100px;
+  display: inline-block;
+  outline: 1px solid red;
+}
+
+#iconos {
+  width: 20%;
+  height: 250px;
+  display: inline-block;
+
+}
+
+
+
+
 
 /*div OVERVIEW*/
 #overview {
@@ -336,7 +392,7 @@ input #myInput{
 /* las solapas como tal*/
 .tab {
   color: #0D0D0D;
-  background-color: yellow;
+  background-color: #FFC107;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   border-radius: 5%;
@@ -431,7 +487,7 @@ footer{
   margin: 160px auto;
   margin-left: 1000px;
   position: fixed;
-  background-color: yellow;
+  background-color: #FFC107;
 }
 
 /* PAULA GIRALDO*/

@@ -55,6 +55,7 @@ window.onload = function() {
 
   //Ingresar datos sobre # de alumnas inscritas y desertoras
   var enrollement = document.getElementById('enrollement');
+  var desertorasGrafico = document.getElementById('desertoras-grafico');
   var inscritasText = document.createElement('div');
   enrollement.appendChild(inscritasText);
   inscritasText.classList.add('infoBox','marginLeft-box');
@@ -75,7 +76,9 @@ window.onload = function() {
   porcentajeDesertoras = (desertoras * 100) / inscritas;
   enrollement.appendChild(desertorasText);
   desertorasText.classList.add('infoBox','marginLeft-box', 'valorNegativo');
-  desertorasText.innerHTML = '<h1>' + (number_format(porcentajeDesertoras,0,'','')) +'% </h1>'+  '<h3>' + 'de deserción'+'<br>'+(desertoras) + '# de desertoras </h3>';
+  desertorasText.innerHTML = '<h1>' + (number_format(porcentajeDesertoras,0,'','')) +'% </h1>'+'<h3>de deserción'+'<br>'+(desertoras) + '# de desertoras </h3>';
+  enrollement.insertBefore(desertorasText, desertorasGrafico);
+  enrollement.insertBefore(inscritasText, desertorasGrafico);
 
   //Función para formatear el resultado del porcentaje
   function number_format( number, decimals, dec_point, thousands_sep ) {
@@ -94,19 +97,45 @@ window.onload = function() {
     var cumple = data.SCL["2017-2"].ratings[1].student.cumple;
     var cumpleMeta = cumple + supera;
     var achievement = document.getElementById('achievement');
+    var cumpleGrafico = document.getElementById('cumple-grafico');
     var achievementText = document.createElement('div');
     achievement.appendChild(achievementText);
     achievementText.classList.add('infoBox','marginCenter', 'valorPositivo');
     achievementText.innerHTML = '<h1>'+(cumpleMeta)+'%</h1>'+'<br>'+'<h3>de alumnas cumple la meta (70% o +)</h3>';
+    achievement.insertBefore(achievementText, cumpleGrafico);
 
+  //Gráfica hse
+  function scratchChart() {
+        // Create the data table.
+        var dataHse = new google.visualization.DataTable();
+        dataHse.addColumn('string', 'Topping');
+        dataHse.addColumn('number', 'Slices');
+        dataHse.addRows([
+          ['Estudiantes Cumplen Objetivo',62],
+          ['Estudiantes No Cumplen Objetivo', 73],
+
+        ]);
+
+        // Set chart options
+        var optionsHse = {'title':'LIFE SKILLS',
+                       'width':500,
+                       'height':300};
+
+
+        // Instantiate and draw our chart, passing in some options.
+        var  Hse = new google.visualization.PieChart(document.getElementById('hse-grafico'));
+       Hse.draw( dataHse, optionsHse );
+     }
 
   //Ingresar nivel de satisfacción nps
   var nps = document.getElementById('nps');
+  var npsGrafico = document.getElementById('nps-grafico');
   var npsText = document.createElement('div');
-  nps.appendChild(npsText);
-  npsText.innerHTML = '<h1># de alumnas que cumple la meta (70% o +) ' +
+  npsText.innerHTML = '<h3>% nivel de satisfacción ' +
     data.SCL["2017-2"].ratings[0].nps // data.SCL["2017-2"].ratings[1].nps
-    +'</h1>';
+    +'</h3>';
+  nps.insertBefore(npsText, npsGrafico);
+  npsText.classList.add('infoBox','marginNPS');
 
 
   //PAULA GIRALDO
